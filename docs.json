@@ -1,7 +1,7 @@
 {
   "theme": "sequoia",
-  "name": "Knowledge base",
-  "description": "Onboarding, employee handbook, HR guides, IT help, company policies, and department runbooks.",
+  "name": "UC Game Wiki",
+  "description": "Community wiki for game distribution and cracking guides",
   "colors": {
     "primary": "#166E3F",
     "light": "#26BD6C",
@@ -13,17 +13,7 @@
   },
   "favicon": "/favicon.ico",
   "navbar": {
-    "links": [
-      {
-        "href": "/it-security/access-requests",
-        "label": "Submit IT ticket"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Employee portal",
-      "href": "https://dashboard.mintlify.com"
-    }
+    "links": []
   },
   "footer": {
     "socials": {
@@ -34,20 +24,30 @@
   "icons": {
     "library": "lucide"
   },
-  "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "assistant",
-      "mcp",
-      "add-mcp"
-    ],
-    "display": "header"
-  },
-  "metadata": {
-    "timestamp": true
-  },
   "navigation": {
-    "groups": []
+    "groups": [
+      {
+        "title": "Getting Started",
+        "pages": [
+          "/getting-started",
+          "/downloading-games",
+          "/tools-we-use"
+        ]
+      },
+      {
+        "title": "Game Preparation",
+        "pages": [
+          "/cracking-games",
+          "/packing-games"
+        ]
+      },
+      {
+        "title": "Troubleshooting",
+        "pages": [
+          "/nothing-working",
+          "/listing-games"
+        ]
+      }
+    ]
   }
 }

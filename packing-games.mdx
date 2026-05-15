@@ -1,0 +1,17 @@
+---
+title: Packing Games
+description: How to package games for upload UC-style
+---
+
+# Packing Games UC-style
+
+We use 7-zip to pack everything up, and we no longer require uploading in 10 GB parts.
+
+## Steps
+
+1. Ensure the main folder is renamed to the game's title along with "- UC" at the end
+2. Create a 7z archive
+3. Set split to volumes: 10240m (roughly 10 GB)
+4. Archive format: .7z
+
+That's really all there is to it now.
