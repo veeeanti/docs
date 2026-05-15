@@ -25,29 +25,14 @@
     "library": "lucide"
   },
   "navigation": {
-    "groups": [
-      {
-        "title": "Getting Started",
-        "pages": [
-          "/getting-started",
-          "/downloading-games",
-          "/tools-we-use"
-        ]
-      },
-      {
-        "title": "Game Preparation",
-        "pages": [
-          "/cracking-games",
-          "/packing-games"
-        ]
-      },
-      {
-        "title": "Troubleshooting",
-        "pages": [
-          "/nothing-working",
-          "/listing-games"
-        ]
-      }
+    "pages": [
+      "/getting-started",
+      "/downloading-games",
+      "/tools-we-use",
+      "/cracking-games",
+      "/packing-games",
+      "/nothing-working",
+      "/listing-games"
     ]
   }
 }
