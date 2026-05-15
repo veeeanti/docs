@@ -1,0 +1,53 @@
+{
+  "theme": "sequoia",
+  "name": "Knowledge base",
+  "description": "Onboarding, employee handbook, HR guides, IT help, company policies, and department runbooks.",
+  "colors": {
+    "primary": "#166E3F",
+    "light": "#26BD6C",
+    "dark": "#166E3F"
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "favicon": "/favicon.ico",
+  "navbar": {
+    "links": [
+      {
+        "href": "/it-security/access-requests",
+        "label": "Submit IT ticket"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Employee portal",
+      "href": "https://dashboard.mintlify.com"
+    }
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/yourcompany",
+      "linkedin": "https://linkedin.com/company/yourcompany"
+    }
+  },
+  "icons": {
+    "library": "lucide"
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "view",
+      "assistant",
+      "mcp",
+      "add-mcp"
+    ],
+    "display": "header"
+  },
+  "metadata": {
+    "timestamp": true
+  },
+  "navigation": {
+    "groups": []
+  }
+}
