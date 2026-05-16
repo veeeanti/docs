@@ -1,41 +1,43 @@
 ---
-title: Cracking Games
-description: Guide to cracking games for distribution
+title: "Cracking games"
+description: "How to bypass Steamworks DRM for UnionCrax uploads using Goldberg, Steamless, and Online-fix. Denuvo is out of scope."
 ---
 
-# Cracking Games
+# Cracking games
 
-While this isn't cracking in a true sense, it's called cracking. This part will only cover simple DRM bypassing. Denuvo, or any other form of DRM than steamworks will not be cracked by us.
+While this isn't cracking in the strict sense, the team calls it that. This page covers simple DRM bypassing only. **Denuvo and any DRM other than Steamworks are out of scope** — the team does not crack those.
 
-This step can be completely skipped if the game is DRM-free.
+Skip this entire page if the game is already DRM-free (for example, from GOG).
 
-## Apply Cracks
+## Apply cracks
 
-Apply all cracks/fixes directly. However if an Online fix requires additional dependencies (such as Steam) put them in a `_Online-fix` folder in the game root.
+Apply cracks and fixes directly to the game folder. If an Online fix requires extra dependencies (such as Steam), put them in an `_Online-fix` folder at the game root.
 
 ## Goldberg Steam Emu
 
-Goldberg Steam Emu is a Steam API replacement that adds offline functionality.
+Goldberg Steam Emu is a Steam API replacement that adds offline functionality. The team uses [`gbe_fork`](/tools-we-use#gbe_fork), a maintained fork, by default.
 
 ## Steamless
 
-Sometimes just replacing the steam API isn't enough, and running the game still results in an error due to steamstub.
+When replacing the Steam API isn't enough and the game still errors out due to SteamStub, use Steamless to unpack the executable.
 
-1. Download steamless
-2. Run Steamless.exe
-3. Select the real game exe
-4. Click unpack file
-5. Delete the original executable
-6. Rename the unpacked exe to the original name
+1. Download Steamless.
+2. Run `Steamless.exe`.
+3. Select the real game executable.
+4. Click **Unpack file**.
+5. Delete the original executable.
+6. Rename the unpacked file to the original executable name.
 
 ## Online-fix
 
-1. Make an account on online-fix.me
-2. Search the game, click the correct result
-3. Download the fix from the Fix Repair folder
-4. Extract (password: online-fix.me)
-5. Put the fix into `_Online-fix` directory
+Online-fix.me publishes multiplayer fixes for many games.
 
-## DRM Cracks
+1. Create an account on online-fix.me.
+2. Search the game and open the matching result.
+3. Download the fix from the **Fix Repair** folder.
+4. Extract it (password: `online-fix.me`).
+5. Move the fix into the `_Online-fix` directory at the game root.
 
-We usually find crack-only files on cs.rin.ru and apply them to our own game files.
+## DRM cracks
+
+For everything else, look for crack-only files on cs.rin.ru and apply them to your own clean game files.

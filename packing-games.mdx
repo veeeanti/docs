@@ -1,17 +1,19 @@
 ---
-title: Packing Games
-description: How to package games for upload UC-style
+title: "Packing games"
+description: "UnionCrax packing convention: 7-Zip with the '- UC' suffix and 10 GB split volumes. Multi-part uploads are no longer required."
 ---
 
-# Packing Games UC-style
+# Packing games UC-style
 
-We use 7-zip to pack everything up, and we no longer require uploading in 10 GB parts.
+The team uses 7-Zip for all uploads. Multi-part uploads are no longer required, but the split convention below still applies.
 
 ## Steps
 
-1. Ensure the main folder is renamed to the game's title along with "- UC" at the end
-2. Create a 7z archive
-3. Set split to volumes: 10240m (roughly 10 GB)
-4. Archive format: .7z
+1. Rename the main game folder to `{Full game name} - UC`.
+2. Drop a `UnionCrax.url` file pointing to the site into the folder root.
+3. Confirm the folder contains all DLCs and no extras like artbooks or soundtracks.
+4. Create a 7-Zip archive of the folder.
+5. Set split volumes to `10240m` (~10 GB).
+6. Set archive format to `.7z`.
 
-That's really all there is to it now.
+That's the full packing process.
