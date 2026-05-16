@@ -1,7 +1,7 @@
 {
-  "theme": "sequoia",
-  "name": "UC Game Wiki",
-  "description": "Community wiki for game distribution and cracking guides",
+  "theme": "luma",
+  "name": "ucWiki / veeWiki",
+  "description": "Team wiki for game listing, crackin', and uploading.",
   "colors": {
     "primary": "#166E3F",
     "light": "#26BD6C",
@@ -13,7 +13,12 @@
   },
   "favicon": "/favicon.ico",
   "navbar": {
-    "links": []
+    "links": [
+      {
+        "href": "https://union-crax.xyz",
+        "label": "site"
+      }
+    ]
   },
   "footer": {
     "socials": {
@@ -34,5 +39,18 @@
       "/nothing-working",
       "/listing-games"
     ]
+  },
+  "metadata": {
+    "timestamp": true
+  },
+  "errors": {
+    "404": {
+      "redirect": true,
+      "title": "Where do you think you're going?"
+    }
+  },
+  "banner": {
+    "content": "hello there",
+    "dismissible": true
   }
 }
