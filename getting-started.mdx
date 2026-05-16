@@ -1,108 +1,74 @@
 ---
-title: Getting Started
-description: Guide to getting started with game file acquisition and preparation
+title: "Getting started"
+description: "Acquire Clean Steam Files (CSF) from Steam, cs.rin.ru, or GOG, then prepare them for the UnionCrax upload workflow."
 ---
 
-# Getting Started
+# Getting started
 
-Getting CSF (Clean Steam Files) - there are mainly 3 sources we use to get game files: ripping directly from Steam using an account which has the game purchased, searching cs.rin forums, or using other platforms that don't include DRM in their games (GOG).
+Getting CSF (Clean Steam Files) is the first step in every upload. There are three main sources the team uses:
 
-GOG is by far the main one recommended, because no DRM.
+- Ripping directly from Steam with an account that owns the game
+- Searching the cs.rin.ru forums
+- Downloading from DRM-free stores such as GOG
+
+GOG is the recommended source whenever it's available because the files ship without DRM.
 
 ## Steam
 
-For this approach you will obviously need a Steam account, with the game you want to download purchased.
+You need a Steam account that owns the game.
 
-We will use Depot Downloader GUI, but if you prefer other depot downloader, feel free to use that one instead.
+The team uses Depot Downloader GUI (DDGUI), but any depot downloader works.
 
-1. First visit SteamDB, and search up the game you want to download
-2. Then copy the number that corresponds to the game's app id, and paste it into DDGUI
-3. Go to the depot tab, select the windows depot, copy the corresponding depot id
-4. Go to the manifests tab, copy the most recent one
-5. In the app enter your steam login details, select where to download the game, and press download
+1. Visit SteamDB and search for the game.
+2. Copy the app ID and paste it into DDGUI.
+3. Open the **Depot** tab, select the Windows depot, and copy the depot ID.
+4. Open the **Manifests** tab and copy the most recent manifest.
+5. Enter your Steam login details, choose a download location, and press **Download**.
 
-Some games have more than one depot for each platform. For example, Tomb Raider GOTY Edition:
+Some titles have multiple depots per platform. For Tomb Raider GOTY Edition, for example:
 
-- Ignore all depots not tagged Windows
-- Don't download any other languages other than English
-- Download all depots: Main content, Executable, English, and DLC depots
-- Don't download redists, debug files, or optional depots
+- Ignore any depot not tagged Windows.
+- Skip non-English language depots.
+- Download all required depots: main content, executable, English, and DLC.
+- Skip redistributables, debug files, and optional depots.
 
-Once the files have been downloaded, in each depot delete the .DepotDownloader folder.
+After the download finishes, delete the `.DepotDownloader` folder inside each depot. You should end up with a folder named after the Steam app ID containing the CSF.
 
-At this point, you should have a folder with the steam app id with CSF in it.
+## cs.rin.ru
 
-## cs.rin
+You need a registered account on the cs.rin.ru forums.
 
-For this approach you will need an account on the forums. You can register by visiting the website.
+1. Open the search page.
+2. Search for the game name and press enter.
+3. Open the thread that matches the game.
+4. Jump to the last page and work backward until you find a working download link.
+5. Download the game files.
 
-1. Click the search button or go to the search page
-2. Enter the name of the game you want to download and hit enter
-3. Find the thread named after your game
-4. Go to the last page, work your way back through the thread, and find a download link that works
-5. Download the game files
+If anything asks for a password during extraction, it is almost always `cs.rin.ru` unless the uploader specifies otherwise.
 
-If during any process anything asks for a password, it is most likely cs.rin.ru, unless the uploader specifies otherwise.
-
-Important: make a note of what build id the files are from. Build id indicates version of the game.
+<Tip>
+Make a note of the **build ID** of the files. Build ID indicates the game version and is required when you list the game later.
+</Tip>
 
 ## GOG
 
-GOG is a special kind of game store, because the games are DRM-free. GOG should always be checked first.
+GOG should always be checked first because the games are DRM-free.
 
-1. Visit GOG and search for the game you want
-2. Download the files
-3. After extracting, install the game
-4. Go to the install location, and copy all of the game files into a separate folder
-5. Take note of the game version written in the name of the setup
+1. Visit GOG and search for the game.
+2. Download the installer.
+3. Run the installer locally.
+4. Copy the installed game files into a separate folder.
+5. Note the game version from the setup file name.
 
-GOG includes files in the game folder that aren't needed to run the game. Delete them:
-- setup executables
-- documentation
-- artbooks
-- soundtracks
+GOG installers include extras that the upload should not contain. Delete:
 
-## Cracking the game
+- Setup executables
+- Documentation
+- Artbooks
+- Soundtracks
 
-This part will only cover simple DRM bypassing. Denuvo, or any other form of DRM than steamworks will not be cracked by us.
+## Next steps
 
-This step can be completely skipped if the game is DRM-free.
-
-Apply all cracks/fixes directly. However if an Online fix requires additional dependencies (such as Steam) put them in a _Online-fix folder in the game root.
-
-## Goldberg
-
-Goldberg Steam Emu is a Steam API that can be used as a replacement for the original one to add offline functionality.
-
-Learn how to use it at the Goldberg documentation.
-
-## Steamless
-
-Sometimes just replacing the steam API isn't enough, and running the game still results in an error due to steamstub.
-
-1. Download steamless
-2. Run Steamless.exe
-3. Click on the three dots, find and select the real game exe
-4. Click unpack file
-5. Delete the original executable
-6. Rename the new one (ending in unpacked.exe) to the name of the original one
-
-## Online-fix
-
-Online-fix is a site that makes cracks for games to allow multiplayer.
-
-1. Make an account on online-fix.me
-2. Search the game, click on the correct result
-3. Download the fix from the Fix Repair folder
-4. Extract it (password: online-fix.me)
-5. Put the fix into _Online-fix directory
-
-## Correctly packaging the game
-
-1. Take the root of your game files and put them in a new folder
-2. The files should include all DLCs, and no extras like artbooks or soundtracks
-3. Put a URL file linking to your site in the folder (rename to UnionCrax.url)
-4. Rename the root game folder: {Full game name} - UC
-5. Create an archive with 7-Zip
-6. Set split to volumes: 10240m (roughly 10 GB)
-7. Archive format: .7z
+- If the game has Steamworks DRM, see [Cracking games](/cracking-games).
+- Once the build is clean, see [Packing games](/packing-games).
+- After upload, see [Listing games](/listing-games).

@@ -1,38 +1,42 @@
 ---
-title: Tools We Use
-description: List of tools used for game preparation and distribution
+title: "Tools we use"
+description: "Reference for the UnionCrax toolchain: gbe_fork, Online-fix.me, Accela, Steamless, and the right-click apply script."
 ---
 
-# Tools We Use
+# Tools we use
 
-You may have noticed we often use "gbe_fork" in our uploads. This is a steam emu - and arguably one of the better ones out there. It is a fork of Goldberg Steam Emu maintained by detanup01 on Github. This is the most up to date emu in terms of steam updates and interfaces.
+This page lists the tools the team relies on for sourcing, cracking, and packing games.
 
 ## gbe_fork
 
-A fork of Goldberg Steam Emu maintained by detanup01. Recommended for steam game emulation.
+A fork of Goldberg Steam Emu maintained by [detanup01](https://github.com/Detanup01/gbe_fork) on GitHub. It's the most up-to-date Steam emu in terms of interfaces and Steam updates, and it's what the team uses by default. You'll see `gbe_fork` referenced in most UC uploads.
 
 ## Online-fix.me
 
-We use online-fix.me or our own uc-online / uc-online2 for multiplayer fixes. Sometimes we'll use Unsteam, sometimes we'll get a game that works online even with gbe_fork applied.
+Used for multiplayer fixes. The team also maintains in-house alternatives — `uc-online` and `uc-online2` — and sometimes uses Unsteam. Some games work online with `gbe_fork` alone and don't need a separate fix.
 
-## DRM Cracks
+## DRM cracks
 
-We usually find crack-only files on cs.rin.ru and apply them to our own game files.
+For titles that need more than a Steam emu, the team usually pulls crack-only files from cs.rin.ru and applies them on top of clean game files.
 
-## Right-click Script
+## Right-click apply script
 
-There is a script on GitHub that you can add to your right-click menu to automatically apply gbe_fork to steam games. It generates interfaces.txt automatically as well as a URL file linking to the site. It also creates a shortcut batch script.
+A GitHub script that adds a right-click menu entry to automatically apply `gbe_fork` to a Steam game folder. It also:
 
-The script has both a Linux version and standard Windows version.
+- Generates `interfaces.txt`
+- Adds a URL file linking to the site
+- Creates a shortcut batch script
+
+Both a Linux and a Windows version are available.
 
 ## Accela
 
-We use Accela mostly to download games too, since donations were made to morrenus, there are 55 daily generations to use with Accela.
+Used to download games when CSF isn't available on cs.rin.ru. Thanks to donations to morrenus, the team has **55 daily generations** available on Accela.
 
-## File Mirrorer
+## File mirrorer
 
-Our file mirrorer is broken currently.
+Currently broken. Skip until further notice.
 
 ## Denuvo
 
-We do not deal with demo bypasses with Denuvo, and we are very on-the-fence with hypervisor stuff from DenuvOwO, just because of the risks that our users will have to take.
+The team does **not** handle Denuvo demo bypasses, and is on the fence about hypervisor-based tools like DenuvOwO because of the risk to end users. Stick to Steamworks-only bypasses.
